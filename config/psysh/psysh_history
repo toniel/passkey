@@ -1,0 +1,4 @@
+_HiStOrY_V2_
+User::find(2);
+User::with('passkeys')->find(2);
+exit
