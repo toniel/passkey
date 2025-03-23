@@ -29,7 +29,7 @@ document.addEventListener('alpine:init',()=>{
 
             try {
 
-                const passkey = await startRegistration({optionsJSON:options.data})
+                const passkey = await startRegistration({optionsJSON:options.data,useAutoRegister:true})
                 console.log('passkey',passkey)
                 this.form.passkey = JSON.stringify(passkey);
 
@@ -48,6 +48,7 @@ document.addEventListener('alpine:init',()=>{
                 })
 
             } catch (error) {
+                console.log('error',error)
                 this.errors = {
                     name:['Passkey creation failed, please try again']
                 }

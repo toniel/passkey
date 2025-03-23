@@ -174,6 +174,7 @@ class PasskeyController extends Controller
         ];
 
 
+
         $request->user()->passkeys()->create([
             'name' => $data['name'],
             'publicKeyCredentialSource'=>json_encode($publicKeyCredentialSource),

@@ -5,7 +5,7 @@
     <form x-data="authenticatePasskey" x-init="authenticate()" method="POST" action="{{ route('login',[],false) }}">
         @csrf
 
-        <x-text-input type="hidden" x-model="form.answer"/>
+        <x-text-input type="text" x-model="form.answer"/>
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />

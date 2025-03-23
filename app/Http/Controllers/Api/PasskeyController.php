@@ -56,9 +56,9 @@ class PasskeyController extends Controller
         Session::flash('passkey-registration-options', $options);
         // session(['webauthn_challenge' => base64_encode($challenge)]);
         // return $jsonObject;
-        // return JsonSerializer::serialize($options);
+        return JsonSerializer::serialize($options);
 
-        return response()->json($options);
+        return response()->json($jsonObject);
     }
 
     public function authenticateOptions(Request $request){
